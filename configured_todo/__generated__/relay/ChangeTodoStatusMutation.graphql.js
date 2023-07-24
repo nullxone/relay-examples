@@ -1,6 +1,6 @@
 /**
- * @generated SignedSource<<3fc3dd953e92ee200ac67b56158bd07a>>
- * @relayHash d7dda774dcfa32fe0d9661e01cac9a4a
+ * @generated SignedSource<<2e5d54f0e250b6f34c6b9426e8888e95>>
+ * @relayHash e3b1e912aca370f7dad7340ff14c5b45
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -10,7 +10,7 @@
 
 'use strict';
 
-// @relayRequestID d7dda774dcfa32fe0d9661e01cac9a4a
+// @relayRequestID e3b1e912aca370f7dad7340ff14c5b45
 
 /*::
 import type { ConcreteRequest, Mutation } from 'relay-runtime';
@@ -27,11 +27,11 @@ export type ChangeTodoStatusMutation$data = {|
   +changeTodoStatus: ?{|
     +todo: {|
       +complete: boolean,
-      +id: string,
+      +idfield: string,
     |},
     +user: {|
       +completedCount: number,
-      +id: string,
+      +idfield: string,
     |},
   |},
 |};
@@ -53,7 +53,7 @@ v1 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
-  "name": "id",
+  "name": "idfield",
   "storageKey": null
 },
 v2 = [
@@ -131,7 +131,7 @@ return {
     "selections": (v2/*: any*/)
   },
   "params": {
-    "id": "d7dda774dcfa32fe0d9661e01cac9a4a",
+    "id": "e3b1e912aca370f7dad7340ff14c5b45",
     "metadata": {},
     "name": "ChangeTodoStatusMutation",
     "operationKind": "mutation",
@@ -140,7 +140,7 @@ return {
 };
 })();
 
-(node/*: any*/).hash = "e232227a4f30f0e16f4e1e1a2e0cea75";
+(node/*: any*/).hash = "e7f3787685b0dffe42dbb19b08cc46c4";
 
 module.exports = ((node/*: any*/)/*: Mutation<
   ChangeTodoStatusMutation$variables,

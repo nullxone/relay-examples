@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<034129d86bd6ad50f15aed1303def6a4>>
+ * @generated SignedSource<<086397aba3dbcd8cd7e5736d9b44d17c>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -26,7 +26,7 @@ export type TodoList_user$data = {|
     +__id: string,
     +edges: ?$ReadOnlyArray<?{|
       +node: ?{|
-        +id: string,
+        +idfield: string,
         +$fragmentSpreads: Todo_todo$fragmentType,
       |},
       +$fragmentSpreads: MarkAllTodosMutation_todoEdge$fragmentType,
@@ -89,7 +89,7 @@ var node/*: ReaderFragment*/ = {
                   "alias": null,
                   "args": null,
                   "kind": "ScalarField",
-                  "name": "id",
+                  "name": "idfield",
                   "storageKey": null
                 },
                 {
@@ -206,7 +206,7 @@ var node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 
-(node/*: any*/).hash = "c83e0fccfae7ee28c5b4994bd7caae65";
+(node/*: any*/).hash = "b6dfbe20f029c5d9962b2b8363aaed8a";
 
 module.exports = ((node/*: any*/)/*: Fragment<
   TodoList_user$fragmentType,

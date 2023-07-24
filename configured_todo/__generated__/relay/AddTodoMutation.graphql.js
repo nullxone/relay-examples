@@ -1,6 +1,6 @@
 /**
- * @generated SignedSource<<5c79c20b3cccc50deaeb29131ca183e4>>
- * @relayHash ac90c59b3a07237ee6f3cf60f9879f90
+ * @generated SignedSource<<fc69886373c04300848c6de9162fa9e9>>
+ * @relayHash ad84b42b8e4f785b4f4a6b587a383b57
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -10,7 +10,7 @@
 
 'use strict';
 
-// @relayRequestID ac90c59b3a07237ee6f3cf60f9879f90
+// @relayRequestID ad84b42b8e4f785b4f4a6b587a383b57
 
 /*::
 import type { ConcreteRequest, Mutation } from 'relay-runtime';
@@ -28,12 +28,12 @@ export type AddTodoMutation$data = {|
     +todoEdge: {|
       +node: ?{|
         +complete: boolean,
-        +id: string,
+        +idfield: string,
         +text: string,
       |},
     |},
     +user: {|
-      +id: string,
+      +idfield: string,
       +totalCount: number,
     |},
   |},
@@ -68,7 +68,7 @@ v2 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
-  "name": "id",
+  "name": "idfield",
   "storageKey": null
 },
 v3 = {
@@ -189,7 +189,7 @@ return {
     ]
   },
   "params": {
-    "id": "ac90c59b3a07237ee6f3cf60f9879f90",
+    "id": "ad84b42b8e4f785b4f4a6b587a383b57",
     "metadata": {},
     "name": "AddTodoMutation",
     "operationKind": "mutation",
@@ -198,7 +198,7 @@ return {
 };
 })();
 
-(node/*: any*/).hash = "4ae75ce7e6724d608803b8cdd76c087f";
+(node/*: any*/).hash = "87af4e53407442c799d270001caa28eb";
 
 module.exports = ((node/*: any*/)/*: Mutation<
   AddTodoMutation$variables,

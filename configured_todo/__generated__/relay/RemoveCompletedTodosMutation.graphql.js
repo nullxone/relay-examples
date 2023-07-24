@@ -1,6 +1,6 @@
 /**
- * @generated SignedSource<<a37df35b0cf4ed65d912d12c9bcf4d61>>
- * @relayHash 4d3a6acb198829c5ed5f748574934211
+ * @generated SignedSource<<0d0942bc2aaeeeec58ab8a4be931f0cd>>
+ * @relayHash e3ec7140800f5c2560528bd080c59029
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -10,7 +10,7 @@
 
 'use strict';
 
-// @relayRequestID 4d3a6acb198829c5ed5f748574934211
+// @relayRequestID e3ec7140800f5c2560528bd080c59029
 
 /*::
 import type { ConcreteRequest, Mutation } from 'relay-runtime';
@@ -27,7 +27,7 @@ export type RemoveCompletedTodosMutation$data = {|
     +deletedTodoIds: ?$ReadOnlyArray<string>,
     +user: {|
       +completedCount: number,
-      +id: string,
+      +idfield: string,
       +totalCount: number,
     |},
   |},
@@ -77,7 +77,7 @@ v3 = {
       "alias": null,
       "args": null,
       "kind": "ScalarField",
-      "name": "id",
+      "name": "idfield",
       "storageKey": null
     },
     {
@@ -159,7 +159,7 @@ return {
     ]
   },
   "params": {
-    "id": "4d3a6acb198829c5ed5f748574934211",
+    "id": "e3ec7140800f5c2560528bd080c59029",
     "metadata": {},
     "name": "RemoveCompletedTodosMutation",
     "operationKind": "mutation",
@@ -168,7 +168,7 @@ return {
 };
 })();
 
-(node/*: any*/).hash = "b78c908fef03b8b5d3ca2bddb5d81d89";
+(node/*: any*/).hash = "567f076911fe4851b9e53bd3688eae40";
 
 module.exports = ((node/*: any*/)/*: Mutation<
   RemoveCompletedTodosMutation$variables,

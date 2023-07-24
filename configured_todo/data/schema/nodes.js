@@ -17,9 +17,9 @@ import {
   connectionDefinitions,
   connectionFromArray,
   fromGlobalId,
-  globalIdField,
-  nodeDefinitions,
 } from 'graphql-relay';
+
+import {globalIdField, nodeDefinitions} from './customGraphql';
 
 import {
   Todo,
@@ -59,7 +59,7 @@ const {nodeInterface, nodeField} = (nodeDefinitions(
 const GraphQLTodo: GraphQLObjectType = new GraphQLObjectType({
   name: 'Todo',
   fields: {
-    id: globalIdField('Todo'),
+    idfield: globalIdField('Todo'),
     text: {
       type: new GraphQLNonNull(GraphQLString),
       resolve: (todo: Todo): string => todo.text,
@@ -93,7 +93,7 @@ const todosArgs: GraphQLFieldConfigArgumentMap = {
 const GraphQLUser: GraphQLObjectType = new GraphQLObjectType({
   name: 'User',
   fields: {
-    id: globalIdField('User'),
+    idfield: globalIdField('User'),
     userId: {
       type: new GraphQLNonNull(GraphQLString),
       resolve: (): string => USER_ID,

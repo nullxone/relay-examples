@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<d76711895a9597ce291577afa4fd22ae>>
+ * @generated SignedSource<<929911eb09306555f3be38e4842f71eb>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -14,7 +14,7 @@ import type { Fragment, ReaderFragment } from 'relay-runtime';
 import type { FragmentType } from "relay-runtime";
 declare export opaque type RemoveCompletedTodosMutation_user$fragmentType: FragmentType;
 export type RemoveCompletedTodosMutation_user$data = {|
-  +id: string,
+  +idfield: string,
   +totalCount: number,
   +userId: string,
   +$fragmentType: RemoveCompletedTodosMutation_user$fragmentType,
@@ -36,7 +36,7 @@ var node/*: ReaderFragment*/ = {
       "alias": null,
       "args": null,
       "kind": "ScalarField",
-      "name": "id",
+      "name": "idfield",
       "storageKey": null
     },
     {
@@ -58,7 +58,7 @@ var node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 
-(node/*: any*/).hash = "7794ab5773d5e5e628ab453eec590be2";
+(node/*: any*/).hash = "e6cda7c14179f1059fee936343b4ff8c";
 
 module.exports = ((node/*: any*/)/*: Fragment<
   RemoveCompletedTodosMutation_user$fragmentType,

@@ -25,7 +25,7 @@ export function useRemoveTodoMutation(
   const user = useFragment(
     graphql`
       fragment RemoveTodoMutation_user on User {
-        id
+        idfield
         userId
         totalCount
         completedCount
@@ -36,7 +36,7 @@ export function useRemoveTodoMutation(
   const todo = useFragment(
     graphql`
       fragment RemoveTodoMutation_todo on Todo {
-        id
+        idfield
         complete
       }
     `,
@@ -48,16 +48,16 @@ export function useRemoveTodoMutation(
     commit({
       variables: {
         input: {
-          id: todo.id,
+          idfield: todo.idfield,
           userId: user.userId,
         },
         connections: [todoConnectionId],
       },
       optimisticResponse: {
         removeTodo: {
-          deletedTodoId: todo.id,
+          deletedTodoId: todo.idfield,
           user: {
-            id: user.id,
+            idfield: user.idfield,
             totalCount: user.totalCount - 1,
             completedCount: user.completedCount + (todo.complete ? -1 : 0),
           },

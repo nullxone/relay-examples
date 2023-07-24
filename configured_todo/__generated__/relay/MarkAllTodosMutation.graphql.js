@@ -1,6 +1,6 @@
 /**
- * @generated SignedSource<<59c7486edc7448c4e75045aaf7139dd1>>
- * @relayHash db9904c31d91416f21d45fe3d153884c
+ * @generated SignedSource<<7e114e89940f94df36a3a3cd05f594ba>>
+ * @relayHash 3dede95e67a1b198dc32e196549268df
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -10,7 +10,7 @@
 
 'use strict';
 
-// @relayRequestID db9904c31d91416f21d45fe3d153884c
+// @relayRequestID 3dede95e67a1b198dc32e196549268df
 
 /*::
 import type { ConcreteRequest, Mutation } from 'relay-runtime';
@@ -26,11 +26,11 @@ export type MarkAllTodosMutation$data = {|
   +markAllTodos: ?{|
     +changedTodos: ?$ReadOnlyArray<{|
       +complete: boolean,
-      +id: string,
+      +idfield: string,
     |}>,
     +user: {|
       +completedCount: number,
-      +id: string,
+      +idfield: string,
     |},
   |},
 |};
@@ -52,7 +52,7 @@ v1 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
-  "name": "id",
+  "name": "idfield",
   "storageKey": null
 },
 v2 = [
@@ -130,7 +130,7 @@ return {
     "selections": (v2/*: any*/)
   },
   "params": {
-    "id": "db9904c31d91416f21d45fe3d153884c",
+    "id": "3dede95e67a1b198dc32e196549268df",
     "metadata": {},
     "name": "MarkAllTodosMutation",
     "operationKind": "mutation",
@@ -139,7 +139,7 @@ return {
 };
 })();
 
-(node/*: any*/).hash = "779c582c4ba0ee3c5be19942628dfaf3";
+(node/*: any*/).hash = "33df7ab8d7398678be94872c83fa1b46";
 
 module.exports = ((node/*: any*/)/*: Mutation<
   MarkAllTodosMutation$variables,

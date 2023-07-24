@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<92adb9550d351b1b52bacb82b7b0d831>>
+ * @generated SignedSource<<5a81177e645c5304481503295555beeb>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -18,7 +18,7 @@ export type RemoveCompletedTodosMutation_todoConnection$data = {|
   +edges: ?$ReadOnlyArray<?{|
     +node: ?{|
       +complete: boolean,
-      +id: string,
+      +idfield: string,
     |},
   |}>,
   +$fragmentType: RemoveCompletedTodosMutation_todoConnection$fragmentType,
@@ -56,7 +56,7 @@ var node/*: ReaderFragment*/ = {
               "alias": null,
               "args": null,
               "kind": "ScalarField",
-              "name": "id",
+              "name": "idfield",
               "storageKey": null
             },
             {
@@ -89,7 +89,7 @@ var node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 
-(node/*: any*/).hash = "5a2052408b9a995f2635949998ec0eba";
+(node/*: any*/).hash = "ae49aac3021314a7f144b8f6d28ecdb9";
 
 module.exports = ((node/*: any*/)/*: Fragment<
   RemoveCompletedTodosMutation_todoConnection$fragmentType,

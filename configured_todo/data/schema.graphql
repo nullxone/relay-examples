@@ -10,7 +10,7 @@ type Query {
 
 type User implements Node {
   """The ID of an object"""
-  id: ID!
+  idfield: ID!
   userId: String!
   todos(status: String = "any", after: String, first: Int, before: String, last: Int): TodoConnection
   totalCount: Int!
@@ -20,7 +20,7 @@ type User implements Node {
 """An object with an ID"""
 interface Node {
   """The id of the object."""
-  id: ID!
+  idfield: ID!
 }
 
 """A connection to a list of items."""
@@ -58,7 +58,7 @@ type TodoEdge {
 
 type Todo implements Node {
   """The ID of an object"""
-  id: ID!
+  idfield: ID!
   text: String!
   complete: Boolean!
 }

@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<18a8b32c560813f69c420c11ef60bb14>>
+ * @generated SignedSource<<fb485f5ec5e394d17e839cd3862fe5d1>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -15,7 +15,7 @@ import type { FragmentType } from "relay-runtime";
 declare export opaque type MarkAllTodosMutation_todoEdge$fragmentType: FragmentType;
 export type MarkAllTodosMutation_todoEdge$data = $ReadOnlyArray<{|
   +node: ?{|
-    +id: string,
+    +idfield: string,
   |},
   +$fragmentType: MarkAllTodosMutation_todoEdge$fragmentType,
 |}>;
@@ -46,7 +46,7 @@ var node/*: ReaderFragment*/ = {
           "alias": null,
           "args": null,
           "kind": "ScalarField",
-          "name": "id",
+          "name": "idfield",
           "storageKey": null
         }
       ],
@@ -57,7 +57,7 @@ var node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 
-(node/*: any*/).hash = "49419294a7d2cb7d3a5079eba46e7c54";
+(node/*: any*/).hash = "d5e944e18d61ae7a6b7b47d2246772ad";
 
 module.exports = ((node/*: any*/)/*: Fragment<
   MarkAllTodosMutation_todoEdge$fragmentType,

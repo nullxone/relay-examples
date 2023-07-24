@@ -9,11 +9,11 @@ const mutation = graphql`
   mutation MarkAllTodosMutation($input: MarkAllTodosInput!) {
     markAllTodos(input: $input) {
       changedTodos {
-        id
+        idfield
         complete
       }
       user {
-        id
+        idfield
         completedCount
       }
     }
@@ -27,7 +27,7 @@ export function useMarkAllTodosMutation(
   const user = useFragment(
     graphql`
       fragment MarkAllTodosMutation_user on User {
-        id
+        idfield
         userId
         totalCount
       }
@@ -38,7 +38,7 @@ export function useMarkAllTodosMutation(
     graphql`
       fragment MarkAllTodosMutation_todoEdge on TodoEdge @relay(plural: true) {
         node {
-          id
+          idfield
         }
       }
     `,
@@ -57,12 +57,12 @@ export function useMarkAllTodosMutation(
         },
         optimisticResponse: {
           markAllTodos: {
-            changedTodos: todos.map(({node: {id}}) => ({
-              id,
+            changedTodos: todos.map(({node: {idfield}}) => ({
+              idfield,
               complete,
             })),
             user: {
-              id: user.id,
+              idfield: user.idfield,
               completedCount: complete ? user.totalCount : 0,
             },
           },

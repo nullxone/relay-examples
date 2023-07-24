@@ -9,11 +9,11 @@ const mutation = graphql`
   mutation ChangeTodoStatusMutation($input: ChangeTodoStatusInput!) {
     changeTodoStatus(input: $input) {
       todo {
-        id
+        idfield
         complete
       }
       user {
-        id
+        idfield
         completedCount
       }
     }
@@ -27,7 +27,7 @@ export function useChangeTodoStatusMutation(
   const user = useFragment(
     graphql`
       fragment ChangeTodoStatusMutation_user on User {
-        id
+        idfield
         userId
         completedCount
       }
@@ -37,7 +37,7 @@ export function useChangeTodoStatusMutation(
   const todo = useFragment(
     graphql`
       fragment ChangeTodoStatusMutation_todo on Todo {
-        id
+        idfield
       }
     `,
     todoRef,
@@ -47,7 +47,7 @@ export function useChangeTodoStatusMutation(
   return useCallback(
     (complete: boolean) => {
       const payload = {
-        id: todo.id,
+        idfield: todo.idfield,
         complete,
       };
       commit({
@@ -61,7 +61,7 @@ export function useChangeTodoStatusMutation(
           changeTodoStatus: {
             todo: payload,
             user: {
-              id: user.id,
+              idfield: user.idfield,
               completedCount: user.completedCount + (complete ? 1 : -1),
             },
           },

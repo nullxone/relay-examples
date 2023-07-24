@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<d2716e95c8ed1a66646eea024dd7b486>>
+ * @generated SignedSource<<2ce8da93a233488c53062b26e623b0e6>>
  * @flow
  * @lightSyntaxTransform
  * @nogrep
@@ -15,7 +15,7 @@ import type { FragmentType } from "relay-runtime";
 declare export opaque type ChangeTodoStatusMutation_user$fragmentType: FragmentType;
 export type ChangeTodoStatusMutation_user$data = {|
   +completedCount: number,
-  +id: string,
+  +idfield: string,
   +userId: string,
   +$fragmentType: ChangeTodoStatusMutation_user$fragmentType,
 |};
@@ -36,7 +36,7 @@ var node/*: ReaderFragment*/ = {
       "alias": null,
       "args": null,
       "kind": "ScalarField",
-      "name": "id",
+      "name": "idfield",
       "storageKey": null
     },
     {
@@ -58,7 +58,7 @@ var node/*: ReaderFragment*/ = {
   "abstractKey": null
 };
 
-(node/*: any*/).hash = "1f20b0dc2be77984a9d2b89f4091bf2e";
+(node/*: any*/).hash = "fe789be39d34a0c4c7babdbae50270cc";
 
 module.exports = ((node/*: any*/)/*: Fragment<
   ChangeTodoStatusMutation_user$fragmentType,

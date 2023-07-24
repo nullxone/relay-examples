@@ -8,7 +8,7 @@ const mutation = graphql`
   mutation RenameTodoMutation($input: RenameTodoInput!) {
     renameTodo(input: $input) {
       todo {
-        id
+        idfield
         text
       }
     }
@@ -21,7 +21,7 @@ export function useRenameTodoMutation(
   const todo = useFragment(
     graphql`
       fragment RenameTodoMutation_todo on Todo {
-        id
+        idfield
         text
       }
     `,
@@ -31,7 +31,7 @@ export function useRenameTodoMutation(
 
   return useCallback((text: string) => {
     const payload = {
-      id: todo.id,
+      idfield: todo.idfield,
       text,
     };
     commit({

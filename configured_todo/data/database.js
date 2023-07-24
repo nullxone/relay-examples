@@ -1,21 +1,21 @@
 // @flow
 export class Todo {
-  +id: string;
+  +idfield: string;
   +text: string;
   +complete: boolean;
 
   constructor(id: string, text: string, complete: boolean) {
-    this.id = id;
+    this.idfield = id;
     this.text = text;
     this.complete = complete;
   }
 }
 
 export class User {
-  +id: string;
+  +idfield: string;
 
   constructor(id: string) {
-    this.id = id;
+    this.idfield = id;
   }
 }
 
@@ -42,12 +42,12 @@ function getTodoIdsForUser(id: string): $ReadOnlyArray<string> {
 
 export function addTodo(text: string, complete: boolean): string {
   const todo = new Todo(`${nextTodoId++}`, text, complete);
-  todosById.set(todo.id, todo);
+  todosById.set(todo.idfield, todo);
 
   const todoIdsForUser = getTodoIdsForUser(USER_ID);
-  todoIdsByUser.set(USER_ID, todoIdsForUser.concat(todo.id));
+  todoIdsByUser.set(USER_ID, todoIdsForUser.concat(todo.idfield));
 
-  return todo.id;
+  return todo.idfield;
 }
 
 export function changeTodoStatus(id: string, complete: boolean) {
@@ -106,10 +106,10 @@ export function markAllTodos(complete: boolean): $ReadOnlyArray<string> {
   );
 
   todosToChange.forEach((todo: Todo): void =>
-    changeTodoStatus(todo.id, complete),
+    changeTodoStatus(todo.idfield, complete),
   );
 
-  return todosToChange.map((todo: Todo): string => todo.id);
+  return todosToChange.map((todo: Todo): string => todo.idfield);
 }
 
 export function removeTodo(id: string) {
@@ -130,7 +130,7 @@ export function removeCompletedTodos(): $ReadOnlyArray<string> {
 
   const todoIdsToRemove = getTodos()
     .filter((todo: Todo): boolean => todo.complete)
-    .map((todo: Todo): string => todo.id);
+    .map((todo: Todo): string => todo.idfield);
 
   // Remove from the users list
   todoIdsByUser.set(

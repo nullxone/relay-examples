@@ -24,7 +24,7 @@ export default function TodoList({userRef}: Props): React.Node {
           __id
           edges {
             node {
-              id
+              idfield
               ...Todo_todo
             }
             ...MarkAllTodosMutation_todoEdge
@@ -79,7 +79,7 @@ export default function TodoList({userRef}: Props): React.Node {
         <ul className="todo-list">
           {user.todos.edges.map(({node}) => (
             <Todo
-              key={node.id}
+              key={node.idfield}
               todoRef={node}
               userRef={user}
               todoConnectionId={user.todos.__id}

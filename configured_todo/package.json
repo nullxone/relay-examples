@@ -66,6 +66,9 @@
     "artifactDirectory": "./__generated__/relay",
     "persistConfig": {
       "file": "./__generated__/queries.json"
+    },
+    "schemaConfig": {
+      "nodeInterfaceIdField": "idfield"
     }
   }
 }

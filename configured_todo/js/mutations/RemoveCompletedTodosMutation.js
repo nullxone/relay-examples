@@ -13,7 +13,7 @@ const mutation = graphql`
     removeCompletedTodos(input: $input) {
       deletedTodoIds @deleteEdge(connections: $connections)
       user {
-        id
+        idfield
         completedCount
         totalCount
       }
@@ -28,7 +28,7 @@ export function useRemoveCompletedTodosMutation(
   const user = useFragment(
     graphql`
       fragment RemoveCompletedTodosMutation_user on User {
-        id
+        idfield
         userId
         totalCount
       }
@@ -41,7 +41,7 @@ export function useRemoveCompletedTodosMutation(
         __id
         edges {
           node {
-            id
+            idfield
             complete
           }
         }
@@ -54,7 +54,7 @@ export function useRemoveCompletedTodosMutation(
   return useCallback(() => {
     const completedTodoIds = todoConnection.edges
       .filter((edge) => edge.node.complete)
-      .map((edge) => edge.node.id);
+      .map((edge) => edge.node.idfield);
 
     commit({
       variables: {
@@ -67,7 +67,7 @@ export function useRemoveCompletedTodosMutation(
         removeCompletedTodos: {
           deletedTodoIds: completedTodoIds,
           user: {
-            id: user.id,
+            idfield: user.idfield,
             completedCount: 0,
             totalCount: user.totalCount - completedTodoIds.length,
           },

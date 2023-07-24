@@ -10,12 +10,12 @@ const mutation = graphql`
       todoEdge @appendEdge(connections: $connections) {
         node {
           complete
-          id
+          idfield
           text
         }
       }
       user {
-        id
+        idfield
         totalCount
       }
     }
@@ -32,7 +32,7 @@ export function useAddTodoMutation(
     graphql`
       fragment AddTodoMutation_user on User {
         userId
-        id
+        idfield
         totalCount
       }
     `,
@@ -54,13 +54,13 @@ export function useAddTodoMutation(
           addTodo: {
             todoEdge: {
               node: {
-                id: 'client:newTodo:' + tempID++,
+                idfield: 'client:newTodo:' + tempID++,
                 text,
                 complete: false,
               },
             },
             user: {
-              id: user.id,
+              idfield: user.idfield,
               totalCount: user.totalCount + 1,
             },
           },
